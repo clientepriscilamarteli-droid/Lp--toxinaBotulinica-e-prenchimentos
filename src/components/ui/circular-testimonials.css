@@ -1,0 +1,16 @@
+.circular-clinical-images { position:relative; width:100%; height:100%; isolation:isolate; perspective:1200px; }
+.circular-clinical-image { position:absolute; top:50%; left:8%; width:84%; height:auto; aspect-ratio:1; max-height:calc(100% - 36px); padding:8px; border:1px solid #b69b7955; border-radius:16px; background:#30231d; box-shadow:0 16px 35px #160e0933; transform-origin:50% 75%; transition:transform .65s cubic-bezier(.22,.8,.22,1),opacity .4s ease,visibility .4s; overflow:hidden; color:#ead1b4; }
+.circular-clinical-image img { width:100%; height:100%; object-fit:contain; }
+.circular-clinical-image[data-position=active] { z-index:3; opacity:1; transform:translate3d(0,-50%,0) rotate(0); cursor:default; }
+.circular-clinical-image[data-position=previous] { z-index:1; opacity:.6; transform:translate3d(-9%,calc(-50% - 25px),-30px) scale(.91) rotate(-7deg); }
+.circular-clinical-image[data-position=next] { z-index:2; opacity:.6; transform:translate3d(9%,calc(-50% - 25px),-30px) scale(.91) rotate(7deg); }
+.circular-clinical-image[data-position=hidden] { z-index:0; opacity:0; visibility:hidden; pointer-events:none; transform:translateY(-50%) scale(.82); }
+.circular-clinical-image[data-position=previous]:hover,.circular-clinical-image[data-position=next]:hover { opacity:.9; }
+.circular-case-label { position:absolute; top:8px; left:10px; font:400 8px/1.3 Poppins,sans-serif; background:#30231ded; padding:5px 8px; border-radius:20px; opacity:0; transition:opacity .2s; }
+.circular-clinical-image:not([data-position=active]):hover .circular-case-label,.circular-clinical-image:focus-visible .circular-case-label { opacity:1; }
+@media(max-width:700px) {
+ .circular-clinical-image { top:50%; left:7%; width:86%; max-height:calc(100% - 27px); padding:5px; border-radius:10px; }
+ .circular-clinical-image[data-position=previous] { transform:translate3d(-8%,calc(-50% - 17px),-25px) scale(.92) rotate(-6deg); }
+ .circular-clinical-image[data-position=next] { transform:translate3d(8%,calc(-50% - 17px),-25px) scale(.92) rotate(6deg); }
+}
+@media(prefers-reduced-motion:reduce) { .circular-clinical-image,.circular-case-label { transition:none; } }
