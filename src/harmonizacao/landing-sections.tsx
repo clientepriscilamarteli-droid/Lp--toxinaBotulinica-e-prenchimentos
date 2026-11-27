@@ -18,7 +18,7 @@ export function Appointment({ children = 'Agendar minha avaliação', href = app
 export function Brand() {
   return <a className="brand" href="#inicio" aria-label="Martelli Care Clinic, início">
     <img src="/martelli-monograma.png" width="52" height="39" alt="" />
-    <span>Martelli<small>Care Clinic</small></span>
+    <span>Martelli Care Clinic<small>Dra. Priscilla Martelli</small></span>
   </a>
 }
 

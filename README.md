@@ -34,3 +34,7 @@ Importe este repositório na Vercel. O `vercel.json` configura Vite, `npm run bu
 - As avaliações têm link para a fonte pública no Trustindex.
 
 O pacote inclui somente os arquivos necessários à LP, sem credenciais, arquivos de trabalho ou imagens intermediárias de geração.
+
+## Identidade visual
+
+A LP acompanha a identidade do site institucional em https://site-institucional-blush-six.vercel.app/: fundos quase pretos, marfim e champagne, Cormorant Garamond e Poppins, assinatura completa e a mesma fotografia institucional de abertura. Os valores e a referência estão em `design/identity.json`; a camada visual está em `src/harmonizacao/institutional-identity.css`. Os casos, comparadores e zoom facial seguem preservados.

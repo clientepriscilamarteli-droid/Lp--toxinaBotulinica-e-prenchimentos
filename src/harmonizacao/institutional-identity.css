@@ -1,0 +1,154 @@
+/* Brand values sampled from the published institutional site on 2026-11-26.
+   This sheet is loaded exclusively by the landing page. */
+:root {
+  --brand-night:#10100f;
+  --brand-black:#080808;
+  --brand-footer:#171311;
+  --brand-ivory:#fffaf4;
+  --brand-champagne:#f0dfc9;
+  --brand-button:#e7d3bb;
+  --brand-paper:#f8f6ef;
+  --brand-cream:#eee8dc;
+  --brand-ink:#241e19;
+  --paper:var(--brand-night);
+  --cream:#181715;
+  --ink:var(--brand-ivory);
+  --muted:#d8cabe;
+  --accent:var(--brand-champagne);
+  --peach:var(--brand-button);
+  --line:#ffffff26;
+  --serif:"Cormorant Garamond","Times New Roman",serif;
+  color:var(--brand-ivory);
+  background:var(--brand-night);
+  font:400 16px/1.7 Poppins,Arial,Helvetica,sans-serif;
+}
+.martelli-lp { background:var(--brand-night); }
+.martelli-lp h2 { font-weight:400; line-height:.98; letter-spacing:-.045em; font-size:clamp(44px,5.8vw,88px); }
+.martelli-lp h2 em { font-weight:400; color:var(--brand-champagne); }
+.martelli-lp .wrap { width:min(1340px,88%); }
+.martelli-lp .section-space { padding-block:clamp(72px,11vw,150px); }
+.martelli-lp .appointment { min-height:51px; padding:13px 22px; font-size:12px; font-weight:400; border-radius:2px; border:1px solid var(--brand-button); background:var(--brand-button); color:#281e15; box-shadow:none; }
+.martelli-lp .appointment:hover { background:#fff6e8; border-color:#fff6e8; color:#281e15; }
+.martelli-lp .appointment.outline { background:transparent; color:var(--brand-ivory); border-color:#ffffff55; }
+.martelli-lp .text-link { font-size:12px; font-weight:400; }
+.martelli-lp .brand { gap:13px; }
+.martelli-lp .brand img { width:48px; height:auto; }
+.martelli-lp .brand > span { font:400 clamp(20px,2.5vw,34px)/1.05 var(--serif); text-transform:uppercase; letter-spacing:-.025em; }
+.martelli-lp .brand small { margin-top:6px; font:400 10px/1.4 Poppins,sans-serif; text-transform:none; letter-spacing:.04em; }
+/* Institutional photographic hero, with the LP's treatment-focused copy. */
+.martelli-lp .hero { background:#24211e; color:var(--brand-ivory); }
+.martelli-lp .hero-header { padding-top:32px; align-items:center; }
+.martelli-lp .hero-header > span { font-size:10px; }
+.martelli-lp .hero-portrait { inset:0; width:100%; height:100%; mask-image:none; }
+.martelli-lp .hero-portrait img { object-position:50% 27%; filter:brightness(.89) saturate(.91); }
+.martelli-lp .hero-portrait::after { background:linear-gradient(90deg,#15110db8 0%,#15110d66 32%,transparent 76%),linear-gradient(180deg,#15120e9c,transparent 28%,transparent 60%,#100d0994); }
+.martelli-lp .hero-title { top:30%; bottom:auto; left:6%; right:auto; width:78%; display:flex; flex-direction:column; align-items:start; gap:4px; text-shadow:0 2px 24px #1c120b80; }
+.martelli-lp .hero-title > span:first-child,.martelli-lp .hero-title > span:last-child { font:400 clamp(48px,5.6vw,86px)/.97 var(--serif); text-align:left; letter-spacing:-.045em; padding:0; }
+.martelli-lp .hero-title > span:last-child { color:var(--brand-champagne); }
+.martelli-lp .hero-title > span:first-child em { font-style:normal; }
+.martelli-lp .hero-intro { top:55%; left:6%; width:min(430px,42%); }
+.martelli-lp .hero-intro > p { font-size:15px; line-height:1.6; margin-top:0; }
+.martelli-lp .hero-intro small { max-width:43ch; margin-top:12px; font-size:12px; color:#f0dfc9; }
+.martelli-lp .round-cta { top:75%; right:auto; left:6%; width:auto; height:auto; min-height:51px; aspect-ratio:auto; display:flex; align-items:center; padding:13px 22px; font-size:12.8px; border-radius:3px; background:var(--brand-champagne); color:var(--brand-ink); transform:none; }
+.martelli-lp .round-cta:hover { transform:none; background:#fff6e8; }
+.martelli-lp .round-cta > span { display:flex; align-items:center; gap:28px; }
+.martelli-lp .round-cta span span { font-size:18px; padding:0; }
+.martelli-lp .hero-bottom { bottom:23px; }
+/* Dark editorial chapters, fine rules and quiet photography. */
+.martelli-lp .concern-photo img,.martelli-lp .benefit img,.martelli-lp .benefit:nth-child(2) img,.martelli-lp .doctor-portrait img { border-radius:3px; }
+.martelli-lp .concern-photo > span,.martelli-lp .doctor-portrait figcaption { border-radius:2px; font-size:10px; background:#171311b8; color:var(--brand-ivory); }
+.martelli-lp .concern-copy p,.martelli-lp .doctor-copy p { font-size:15px; color:#d8cabe; }
+.martelli-lp .concern-list li,.martelli-lp .credentials li { font-size:12px; }
+.martelli-lp .treatment-lab { background:var(--brand-black); --lab-paper:var(--brand-ivory); --lab-champagne:var(--brand-champagne); --lab-line:#ffffff26; }
+.martelli-lp .story-intro h2 { font-family:Arial,Helvetica,sans-serif; font-size:clamp(35px,4.1vw,60px); line-height:1.06; letter-spacing:-.035em; }
+.martelli-lp .story-intro h2 br { display:none; }
+.martelli-lp .story-intro h2 em { display:block; margin-top:.15em; font-family:var(--serif); font-size:1.2em; }
+.martelli-lp .story-intro > p,.martelli-lp .story-answer p { color:#d8cabe; }
+.martelli-lp .story-signature,.martelli-lp .story-choices button[aria-pressed=true],.martelli-lp .lab-label { color:var(--brand-champagne); }
+.martelli-lp .story-choices button { color:#bcae9f; }
+.martelli-lp .story-choices button[aria-pressed=true] { border-bottom-color:var(--brand-champagne); }
+.martelli-lp .story-next,.martelli-lp .story-answer .story-planning { color:#bcae9f; }
+.martelli-lp .face-scroll-section { background:var(--brand-night); }
+.martelli-lp .face-copy > p,.martelli-lp .region-description p { color:#d8cabe; }
+.martelli-lp .region-buttons button { color:#bcae9f; }
+.martelli-lp .region-buttons button[aria-pressed=true] { color:var(--brand-champagne); }
+.martelli-lp .face-copy small { color:#bcae9f; }
+.martelli-lp .face-scroll-progress [data-active=true] { color:var(--brand-champagne); }
+.martelli-lp .face-scroll-progress i { background:#ffffff26; }
+.martelli-lp .face-scroll-progress [data-active=true] i { background:var(--brand-champagne); }
+.martelli-lp .benefits { padding-top:20px; }
+.martelli-lp .benefit { background:var(--brand-paper); border-radius:3px; overflow:hidden; color:var(--brand-ink); }
+.martelli-lp .benefit:nth-child(2) { padding-top:0; margin-top:45px; }
+.martelli-lp .benefit div { padding:23px 23px 28px; }
+.martelli-lp .benefit h3 { font-weight:400; }
+.martelli-lp .benefit p { color:#6b5e53; line-height:1.75; }
+.martelli-lp .results-scroll { background:var(--brand-night); color:var(--brand-ivory); }
+.martelli-lp .results-intro h2 em,.martelli-lp .results-case-number { color:var(--brand-champagne); }
+.martelli-lp .results-caption > p,.martelli-lp .results-caption details,.martelli-lp .results-scroll-hint { color:#d8cabe; }
+.martelli-lp .results-caption summary { border-color:#ffffff26; }
+.martelli-lp .results-progress button[aria-current=step] { color:var(--brand-champagne); }
+.martelli-lp .results-progress button[aria-current=step] i { background:var(--brand-champagne); }
+.martelli-lp .results-progress i { background:#ffffff26; }
+.martelli-lp .results-photo-toolbar button,.martelli-lp .results-photo-toolbar a,.martelli-lp .results-disclosure,.martelli-lp .results-arrows span { color:#c8b9a9; }
+.martelli-lp .circular-clinical-image { border-radius:3px; background:#161412; border-color:#d9b89540; box-shadow:0 16px 35px #0003; }
+.martelli-lp .scroll-comparison { background:#161412; }
+.martelli-lp .timeline-section { background:var(--brand-black); color:var(--brand-ivory); }
+.martelli-lp .step-number { color:var(--brand-champagne); }
+.martelli-lp .treatment-timeline li { border-color:#ffffff26; }
+.martelli-lp .treatment-timeline li::before { background:var(--brand-champagne); }
+.martelli-lp .treatment-timeline p { color:#d8cabe; }
+/* The reference closes with warm ivory sections. */
+.martelli-lp .testimonials,.martelli-lp .faq { background:var(--brand-paper); color:var(--brand-ink); width:100%; padding-inline:max(6%,calc((100% - 1340px)/2)); --muted:#6b5e53; --line:#d8ccbe; }
+.martelli-lp .testimonials h2 em,.martelli-lp .faq h2 em { color:#8a715a; }
+.martelli-lp .review-carousel { background:#eee8dc; }
+.martelli-lp .review-google { color:#736253; }
+.martelli-lp .review-controls button { border-color:#ad947b; }
+.martelli-lp .review-controls button:hover { background:var(--brand-button); }
+.martelli-lp .review-people button[aria-pressed=true] img { outline-color:#8a715a; }
+.martelli-lp .review-rating > span:first-child,.martelli-lp .review-stars { color:#95764d; }
+.martelli-lp .faq { padding-top:0; }
+.martelli-lp .faq a,.martelli-lp .faq-list { color:var(--brand-ink); }
+.martelli-lp .final-cta { background:var(--brand-cream); color:var(--brand-ink); }
+.martelli-lp .final-backdrop,.martelli-lp .final-cta::before { display:none; }
+.martelli-lp .final-grid h2 em { color:#8a715a; }
+.martelli-lp .final-grid > div > p,.martelli-lp .final-grid .text-link,.martelli-lp .booking-privacy { color:#6b5e53; }
+.martelli-lp .booking-form > input { background:#f8f6ef; color:var(--brand-ink); border-color:#c6b5a2; border-radius:2px; }
+.martelli-lp .consent input { accent-color:#8a715a; }
+.martelli-lp .footer { background:var(--brand-footer); color:#e1ceba; width:100%; padding-inline:6%; border-top:1px solid #d9b89540; }
+.martelli-lp .footer .brand img { filter:none; }
+.martelli-lp .footer .brand > span { font-size:24px; }
+.martelli-lp .footer p { color:#bcae9f; }
+.martelli-lp .floating-whatsapp { border-radius:3px; background:var(--brand-champagne); color:var(--brand-ink); border-color:var(--brand-champagne); box-shadow:none; }
+.martelli-lp .sticky-cta { background:var(--brand-cream); }
+@media(min-width:1600px) { .martelli-lp .hero-title { left:6%; right:auto; } }
+@media(max-width:1000px) { .martelli-lp .hero-title { gap:5px; } .martelli-lp .hero-intro { width:48%; } }
+@media(max-width:700px) {
+ .martelli-lp .wrap { width:88%; }
+ .martelli-lp .hero-header { padding-top:22px; }
+ .martelli-lp .hero-header .brand > span { font-size:18px; }
+ .martelli-lp .hero-header .brand img { width:33px; }
+ .martelli-lp .hero-header .brand { gap:9px; }
+ .martelli-lp .brand small { font-size:8px; }
+ .martelli-lp .hero-header > span { font-size:8px; max-width:12ch; }
+ .martelli-lp .hero-portrait img { object-position:53% 27%; }
+ .martelli-lp .hero-portrait::after { background:linear-gradient(0deg,#100d09df,transparent 80%),linear-gradient(90deg,#15110d66,transparent 90%); }
+ .martelli-lp .hero-title { top:38%; width:88%; left:6%; }
+ .martelli-lp .hero-title > span:first-child,.martelli-lp .hero-title > span:last-child { font-size:clamp(40px,10.6vw,62px); line-height:1; }
+ .martelli-lp .hero-intro { top:59%; width:85%; }
+ .martelli-lp .hero-intro > p { font-size:13px; line-height:1.5; }
+ .martelli-lp .hero-intro small { display:none; }
+ .martelli-lp .round-cta { top:75%; left:6%; font-size:12px; min-height:48px; }
+ .martelli-lp .hero-bottom { font-size:8px; }
+ .martelli-lp .hero-bottom > span { max-width:26ch; text-align:right; }
+ .martelli-lp h2 { font-size:44px; }
+ .martelli-lp .story-intro h2 { font-size:35px; }
+ .martelli-lp .face-scroll-stage h2 { font-size:36px; }
+ .martelli-lp .face-copy > p { font-size:11px; }
+ .martelli-lp .results-intro h2 { font-size:39px; }
+ .martelli-lp .benefit:nth-child(2) { margin-top:0; }
+ .martelli-lp .benefit div { padding:20px; }
+ .martelli-lp .benefits { padding-top:20px; }
+ .martelli-lp .testimonials,.martelli-lp .faq,.martelli-lp .footer { width:100%; }
+ .martelli-lp .footer { align-items:start; }
+ .martelli-lp .footer .brand > span { font-size:20px; }
+}

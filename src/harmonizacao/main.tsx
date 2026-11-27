@@ -12,25 +12,26 @@ import './interactive-sections.css'
 import './scroll-experience.css'
 import { EditorialFacePortrait } from './editorial-face-portrait'
 import './editorial-face-map.css'
+import './institutional-identity.css'
 
 gsap.registerPlugin(useGSAP, ScrollTrigger)
 
 function HeroSection() {
   return (
     <section className="hero" id="inicio" aria-labelledby="hero-title">
-      <div className="hero-lines" aria-hidden="true"><i /><i /><i /></div>
+
       <header className="hero-header wrap"><Brand /><span>Jardim Paulista · São Paulo</span></header>
       <figure className="hero-portrait">
-        <img src="/retratos/retrato-rose.jpg" alt="Dra. Priscilla Martelli" width="617" height="870" fetchPriority="high" />
+        <img src="/retratos/priscilla-hero-sofa.jpg" alt="Dra. Priscilla Martelli no jardim, em retrato institucional da clínica" width="854" height="1280" fetchPriority="high" />
       </figure>
       <div className="hero-intro">
-        <p className="eyebrow">Cuidado facial individualizado</p>
+
         <p>Rejuvenesça com naturalidade.<br />Valorize os traços que são seus.</p>
         <small>Uma avaliação atenta à sua expressão, às proporções e ao que você deseja cuidar.</small>
       </div>
-      <a className="round-cta" href={appointment} target="_blank" rel="noreferrer"><span>Agendar<br />avaliação <Arrow /></span></a>
+      <a className="round-cta" href={appointment} target="_blank" rel="noreferrer"><span>Agendar avaliação <Arrow /></span></a>
       <h1 className="hero-title" id="hero-title">
-        <span>Toxina<br /><em>botulínica</em></span>
+        <span>Toxina <em>botulínica</em></span>
         <span><em>Preenchimentos</em></span>
       </h1>
       <div className="hero-bottom wrap">
@@ -239,9 +240,9 @@ function App() {
   useGSAP(() => {
     const media = gsap.matchMedia()
     media.add('(prefers-reduced-motion: no-preference)', () => {
-      gsap.from('.hero-intro, .hero-title > span', { y: 28, opacity: 0, duration: 1.1, stagger: 0.12, ease: 'power2.out' })
+      gsap.from('.hero-title > span', { y: 28, opacity: 0, duration: 1.1, stagger: 0.12, ease: 'power2.out' })
       gsap.to('.hero-portrait img', { yPercent: 7, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } })
-      gsap.to('.hero-intro, .hero-title, .round-cta', { y: -35, opacity: .15, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: .6 } })
+      gsap.to('.hero-intro, .hero-title, .round-cta', { y: -35, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: .6 } })
       for (const element of gsap.utils.toArray<HTMLElement>('.reveal')) {
         gsap.from(element, { y: 32, opacity: 0, duration: .85, ease: 'power2.out', scrollTrigger: { trigger: element, start: 'top 87%', once: true } })
       }
@@ -250,7 +251,7 @@ function App() {
   }, { scope: root })
 
   return (
-    <div ref={root}>
+    <div className="martelli-lp" ref={root}>
       <a className="skip-link" href="#conteudo">Pular para o conteúdo</a>
       <main id="conteudo">
         <HeroSection />

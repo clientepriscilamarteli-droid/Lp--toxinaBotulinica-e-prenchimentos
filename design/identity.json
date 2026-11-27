@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "name": "Martelli Care — identidade institucional",
+    "source_references": [
+      "https://site-institucional-blush-six.vercel.app/"
+    ],
+    "created_at": "2026-11-26",
+    "method": "Valores de CSS computado extraídos da versão publicada; composição conferida no navegador."
+  },
+  "design_system": {
+    "color": {
+      "background": "#10100f",
+      "chapter": "#080808",
+      "footer": "#171311",
+      "foreground": "#fffaf4",
+      "champagne": "#f0dfc9",
+      "button": "#e7d3bb",
+      "paper": "#f8f6ef",
+      "cream": "#eee8dc",
+      "ink": "#241e19",
+      "muted": "#d8cabe"
+    },
+    "typography": {
+      "heading": "Cormorant Garamond",
+      "body": "Poppins",
+      "heading_weight": 400,
+      "heading_tracking": "-.045em",
+      "body_weight": 400
+    },
+    "shape": {
+      "button_radius": "2–3px",
+      "image_radius": "3px",
+      "rules": "1px, baixa opacidade"
+    },
+    "layout": {
+      "content_width": "min(1340px,88%)",
+      "spacing": "72–150px",
+      "composition": "Editorial assimétrica"
+    }
+  },
+  "design_style": {
+    "mood": "Sóbrio, acolhedor, editorial, premium",
+    "imagery": "Fotografia real da doutora e clínica; hero compartilhada com o institucional",
+    "contrast": "Predominância escura com encerramento em marfim",
+    "brand_lockup": "Monograma + MARTELLI CARE CLINIC + Dra. Priscilla Martelli"
+  },
+  "visual_effects": {
+    "technology": "GSAP ScrollTrigger existente",
+    "scroll": "Revelações, sequência de casos e zoom facial preservados",
+    "ornamentation": "Sem órbitas e sem CTA circular",
+    "reduced_motion": "Preservada"
+  }
+}
