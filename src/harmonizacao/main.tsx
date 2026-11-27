@@ -22,8 +22,8 @@ function HeroSection() {
     <section className="hero" id="inicio" aria-labelledby="hero-title">
 
       <header className="hero-header wrap"><Brand /><span>Jardim Paulista · São Paulo</span></header>
-      <figure className="hero-portrait">
-        <img src="/retratos/priscilla-hero-sofa.jpg" alt="Dra. Priscilla Martelli no jardim, em retrato institucional da clínica" width="854" height="1280" fetchPriority="high" />
+      <figure className="hero-portrait hero-portrait-rose">
+        <img src="/retratos/retrato-rose.jpg" alt="Dra. Priscilla Martelli em retrato profissional com blusa rosé" width="616" height="870" fetchPriority="high" />
       </figure>
       <div className="hero-intro">
 
