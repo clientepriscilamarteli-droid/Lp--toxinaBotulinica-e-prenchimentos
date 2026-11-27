@@ -6,6 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { clinic } from '../clinic'
 import { Appointment, Arrow, Booking, Brand, appointment } from './landing-sections'
 import './page.css'
+import { useInstitutionalMotion } from '../hooks/use-institutional-motion'
 import { InteractiveExplainer } from './interactive-treatment'
 import { ClinicalCaseStudies } from './case-studies'
 import './interactive-sections.css'
@@ -229,6 +230,7 @@ function FAQAccordion() {
 
 function App() {
   const root = useRef<HTMLDivElement>(null)
+  useInstitutionalMotion(root, 'toxina')
   const [showFixed, setShowFixed] = useState(false)
   useEffect(() => {
     const hero = document.getElementById('inicio')!
@@ -243,9 +245,6 @@ function App() {
       gsap.from('.hero-title > span', { y: 28, opacity: 0, duration: 1.1, stagger: 0.12, ease: 'power2.out' })
       gsap.to('.hero-portrait img', { yPercent: 7, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } })
       gsap.to('.hero-intro, .hero-title, .round-cta', { y: -35, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: .6 } })
-      for (const element of gsap.utils.toArray<HTMLElement>('.reveal')) {
-        gsap.from(element, { y: 32, opacity: 0, duration: .85, ease: 'power2.out', scrollTrigger: { trigger: element, start: 'top 87%', once: true } })
-      }
     })
     return () => media.revert()
   }, { scope: root })
