@@ -1,5 +1,6 @@
 import { type FormEvent } from 'react'
 import { clinic } from '../clinic'
+import { ClinicAction, ClinicSubmit } from '../components/ui/clinic-ui'
 
 export const appointment = clinic.whatsapp + '?text=' + encodeURIComponent('Olá! Gostaria de agendar uma avaliação de toxina botulínica e preenchimentos com a Dra. Priscilla Martelli.')
 
@@ -12,7 +13,7 @@ export function Appointment({ children = 'Agendar minha avaliação', href = app
   href?: string
   variant?: string
 }) {
-  return <a className={`appointment ${variant}`} href={href} target="_blank" rel="noreferrer">{children}<Arrow /></a>
+  return <ClinicAction href={href} variant={variant === 'outline' ? 'treatment' : 'booking'} target="_blank" rel="noreferrer">{children}</ClinicAction>
 }
 
 export function Brand() {
@@ -58,7 +59,7 @@ export function Booking() {
             <summary>Aviso de privacidade</summary>
             <p>Seu nome prepara uma mensagem no WhatsApp. Ao enviar, a clínica recebe o nome e o número para responder ao pedido. Você pode solicitar acesso, correção, exclusão ou revogar o consentimento pelo <a href={clinic.whatsapp} target="_blank" rel="noreferrer">WhatsApp da clínica</a>.</p>
           </details>
-          <button className="appointment light" type="submit">Continuar no WhatsApp <Arrow /></button>
+          <ClinicSubmit>Continuar no WhatsApp</ClinicSubmit>
         </form>
       </div>
     </section>

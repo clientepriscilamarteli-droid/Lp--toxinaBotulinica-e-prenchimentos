@@ -14,32 +14,30 @@ import './scroll-experience.css'
 import { EditorialFacePortrait } from './editorial-face-portrait'
 import './editorial-face-map.css'
 import './institutional-identity.css'
+import { ClinicHeader, ClinicHero, ClinicTreatmentCard } from '../components/ui/clinic-ui'
+import '../components/ui/clinic-ui.css'
 
 gsap.registerPlugin(useGSAP, ScrollTrigger)
 
+const navigation = [
+  { href: '#inicio', label: 'Toxina botulínica e preenchimentos' },
+  { href: '#tratamentos', label: 'Conhecer o tratamento' },
+  { href: '#regioes', label: 'Regiões do rosto' },
+  { href: '#duvidas', label: 'Dúvidas' },
+  { href: '#agendar', label: 'Agendar avaliação' },
+]
+
 function HeroSection() {
   return (
-    <section className="hero" id="inicio" aria-labelledby="hero-title">
-
-      <header className="hero-header wrap"><Brand /><span>Jardim Paulista · São Paulo</span></header>
-      <figure className="hero-portrait">
-        <img src="/retratos/priscilla-hero-sofa.jpg" alt="Dra. Priscilla Martelli no jardim, em retrato institucional da clínica" width="854" height="1280" fetchPriority="high" />
-      </figure>
-      <div className="hero-intro">
-
-        <p>Rejuvenesça com naturalidade.<br />Valorize os traços que são seus.</p>
-        <small>Uma avaliação atenta à sua expressão, às proporções e ao que você deseja cuidar.</small>
-      </div>
-      <a className="round-cta" href={appointment} target="_blank" rel="noreferrer"><span>Agendar avaliação <Arrow /></span></a>
-      <h1 className="hero-title" id="hero-title">
-        <span>Toxina <em>botulínica</em></span>
-        <span><em>Preenchimentos</em></span>
-      </h1>
-      <div className="hero-bottom wrap">
-        <a href="#tratamentos">Conheça seu próximo cuidado <span aria-hidden="true">↓</span></a>
-        <span>Dra. Priscilla Martelli · Cirurgiã-dentista · CRO 121952</span>
-      </div>
-    </section>
+    <ClinicHero
+      treatment="Toxina botulínica e preenchimentos"
+      title="Rejuvenesça com naturalidade. Valorize os traços que são seus."
+      description="Uma avaliação atenta à sua expressão, às proporções e ao que você deseja cuidar."
+      media={<img src="/retratos/priscilla-hero-sofa.jpg" alt="Dra. Priscilla Martelli no jardim da clínica" width={854} height={1280} fetchPriority="high" />}
+      appointment={<Appointment />}
+      treatmentHref="#tratamentos"
+      className="toxina-opening"
+    />
   )
 }
 
@@ -225,7 +223,7 @@ const faqs = [
 ]
 
 function FAQAccordion() {
-  return <section className="faq wrap section-space" aria-labelledby="faq-title"><div className="reveal"><h2 id="faq-title">Sua dúvida<br /><em>pode estar aqui.</em></h2><a className="text-link" href={appointment} target="_blank" rel="noreferrer">Conversar com a equipe <Arrow /></a></div><div className="faq-list reveal">{faqs.map(([question, answer]) => <details key={question}><summary>{question}<span aria-hidden="true">+</span></summary><p>{answer}</p></details>)}<p className="clinical-sources">Saiba mais sobre <a href="https://www.aad.org/public/cosmetic/wrinkles/botulinum-toxin-faqs" target="_blank" rel="noreferrer">toxina botulínica</a> e <a href="https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2025/anvisa-alerta-sobre-risco-de-botulismo-apos-administracao-de-toxina-botulinica/" target="_blank" rel="noreferrer">cuidados com a aplicação</a>.</p></div></section>
+  return <section className="faq wrap section-space" id="duvidas" aria-labelledby="faq-title"><div className="reveal"><h2 id="faq-title">Sua dúvida<br /><em>pode estar aqui.</em></h2><a className="text-link" href={appointment} target="_blank" rel="noreferrer">Conversar com a equipe <Arrow /></a></div><div className="faq-list reveal">{faqs.map(([question, answer]) => <details key={question}><summary>{question}<span aria-hidden="true">+</span></summary><p>{answer}</p></details>)}<p className="clinical-sources">Saiba mais sobre <a href="https://www.aad.org/public/cosmetic/wrinkles/botulinum-toxin-faqs" target="_blank" rel="noreferrer">toxina botulínica</a> e <a href="https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2025/anvisa-alerta-sobre-risco-de-botulismo-apos-administracao-de-toxina-botulinica/" target="_blank" rel="noreferrer">cuidados com a aplicação</a>.</p></div></section>
 }
 
 function App() {
@@ -239,21 +237,19 @@ function App() {
     return () => observer.disconnect()
   }, [])
 
-  useGSAP(() => {
-    const media = gsap.matchMedia()
-    media.add('(prefers-reduced-motion: no-preference)', () => {
-      gsap.from('.hero-title > span', { y: 28, opacity: 0, duration: 1.1, stagger: 0.12, ease: 'power2.out' })
-      gsap.to('.hero-portrait img', { yPercent: 7, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } })
-      gsap.to('.hero-intro, .hero-title, .round-cta', { y: -35, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: .6 } })
-    })
-    return () => media.revert()
-  }, { scope: root })
-
   return (
-    <div className="martelli-lp" ref={root}>
+    <div className="martelli-lp clinic-theme" ref={root}>
       <a className="skip-link" href="#conteudo">Pular para o conteúdo</a>
+      <ClinicHeader label="Toxina botulínica" links={navigation} />
       <main id="conteudo">
         <HeroSection />
+        <ClinicTreatmentCard
+          title="Toxina botulínica e preenchimentos"
+          description="Uma avaliação atenta à sua expressão, às proporções e ao que você deseja cuidar."
+          image={<img src="/retratos/toxina-instagram.jpg" alt="Frasco de toxina botulínica em mãos enluvadas" loading="lazy" />}
+          href="#tratamentos"
+          appointment={<Appointment>Agendar</Appointment>}
+        />
         <ConcernSection />
         <InteractiveExplainer />
         <InteractiveFaceMap />

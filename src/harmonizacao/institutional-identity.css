@@ -152,3 +152,43 @@
  .martelli-lp .footer { align-items:start; }
  .martelli-lp .footer .brand > span { font-size:20px; }
 }
+
+/* Ultraformer surfaces for the existing treatment sections. */
+.clinic-theme.martelli-lp {
+  --serif: var(--clinic-sans);
+  --brand-night: var(--clinic-dark);
+  --brand-black: var(--clinic-dark);
+  --brand-surface: var(--clinic-surface);
+  --brand-champagne: var(--clinic-white);
+  --brand-muted: var(--clinic-dark-muted);
+  background: var(--clinic-white);
+  color: var(--clinic-ink);
+}
+.clinic-theme.martelli-lp h2 em { font-family: var(--clinic-italic); color: inherit; }
+.clinic-theme.martelli-lp :is(.concern,.benefits,.doctor,.testimonials,.faq,.final-cta,.footer) {
+  --muted: var(--clinic-text-gray);
+  --line: var(--clinic-border);
+  color: var(--clinic-ink);
+}
+.clinic-theme.martelli-lp :is(.testimonials,.faq,.final-cta) { background: var(--clinic-soft); }
+.clinic-theme.martelli-lp .footer { background: var(--clinic-white); border-color: var(--clinic-border); }
+.clinic-theme.martelli-lp :is(.concern-copy p,.doctor-copy p,.benefit p,.review-google,.footer p,
+  .final-grid > div > p,.final-grid .text-link,.booking-privacy,.booking-form > input::placeholder,.clinical-sources) {
+  color: var(--clinic-text-gray);
+}
+.clinic-theme.martelli-lp :is(.faq a,.faq-list,.final-grid h2 em,.review-rating > span:first-child,.review-stars) { color: inherit; }
+.clinic-theme.martelli-lp :is(.benefit,.review-carousel) { background: var(--clinic-white); border: 1px solid var(--clinic-border); color: inherit; border-radius: var(--clinic-radius); }
+.clinic-theme.martelli-lp .review-controls button:hover { background: var(--clinic-gray); }
+.clinic-theme.martelli-lp .review-people button[aria-pressed=true] img { outline-color: var(--clinic-ink); }
+.clinic-theme.martelli-lp .booking-form > input { background: var(--clinic-white); color: var(--clinic-ink); border-color: #777; }
+.clinic-theme.martelli-lp .consent input { accent-color: var(--clinic-ink); }
+.clinic-theme.martelli-lp .footer .brand img { filter: brightness(0); }
+.clinic-theme.martelli-lp :is(.scroll-divider span,.results-photo-toolbar button,.results-photo-toolbar a) { border-radius: var(--clinic-radius); }
+.clinic-theme.martelli-lp .scroll-divider span { width: 42px; height: 42px; background: var(--clinic-soft); color: var(--clinic-ink); }
+.clinic-theme.martelli-lp .scroll-photo-label { border-radius: var(--clinic-radius); background: var(--clinic-soft); color: var(--clinic-ink); }
+.clinic-theme.martelli-lp .story-content .clinic-action { margin-top: 27px; }
+.clinic-theme.martelli-lp .sticky-cta .clinic-action { width: 100%; }
+.toxina-opening { --clinic-image-position: center 30%; }
+@media (max-width: 767px) {
+  .toxina-opening { --clinic-image-position: center 24%; }
+}
