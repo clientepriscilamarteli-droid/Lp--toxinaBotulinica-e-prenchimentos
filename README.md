@@ -37,4 +37,4 @@ O pacote inclui somente os arquivos necessários à LP, sem credenciais, arquivo
 
 ## Identidade visual
 
-A LP acompanha a identidade do site institucional em https://site-institucional-blush-six.vercel.app/: fundos quase pretos, marfim e champagne, Cormorant Garamond e Poppins, assinatura completa e um retrato profissional exclusivo na abertura da LP. Os valores e a referência estão em `design/identity.json`; a camada visual está em `src/harmonizacao/institutional-identity.css`. Os casos, comparadores e zoom facial seguem preservados.
+A paleta segue o guia `IDENTIDADE-VISUAL-ULTRAFORMER.md`: grafite `#09090B`, branco `#FFFFFF`, marfim `#F9F7F2`, texto escuro `#12120F`, texto de apoio `#D4D4D8` e acabamento prateado nos botões. A padronização está em `src/harmonizacao/institutional-identity.css` e se limita às cores e aos acabamentos de superfície. A estrutura, as fontes, as dimensões, os espaçamentos, as fotografias, os textos e as interações da LP foram preservados.

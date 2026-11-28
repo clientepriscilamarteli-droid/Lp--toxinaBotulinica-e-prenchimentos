@@ -1,24 +1,26 @@
 {
   "meta": {
-    "name": "Martelli Care — identidade institucional",
+    "name": "Martelli Care — paleta Ultraformer na LP",
     "source_references": [
-      "https://site-institucional-blush-six.vercel.app/"
+      "https://site-institucional-blush-six.vercel.app/",
+      "IDENTIDADE-VISUAL-ULTRAFORMER.md"
     ],
     "created_at": "2026-11-26",
-    "method": "Valores de CSS computado extraídos da versão publicada; composição conferida no navegador."
+    "method": "Estrutura institucional preservada; cores padronizadas conforme o guia Ultraformer fornecido.",
+    "updated_at": "2026-11-27"
   },
   "design_system": {
     "color": {
-      "background": "#10100f",
-      "chapter": "#080808",
-      "footer": "#171311",
-      "foreground": "#fffaf4",
-      "champagne": "#f0dfc9",
-      "button": "#e7d3bb",
-      "paper": "#f8f6ef",
-      "cream": "#eee8dc",
-      "ink": "#241e19",
-      "muted": "#d8cabe"
+      "background": "#09090B",
+      "chapter": "#09090B",
+      "footer": "#09090B",
+      "foreground": "#FFFFFF",
+      "champagne": "#D4D4D8",
+      "button": "#18181B",
+      "paper": "#F9F7F2",
+      "cream": "#FAFAFA",
+      "ink": "#12120F",
+      "muted": "#D4D4D8"
     },
     "typography": {
       "heading": "Cormorant Garamond",
@@ -40,7 +42,7 @@
   },
   "design_style": {
     "mood": "Sóbrio, acolhedor, editorial, premium",
-    "imagery": "Fotografia real da doutora e clínica; hero da LP usa o retrato rosé para se diferenciar da hero institucional, mantendo a mesma paleta e tratamento editorial.",
+    "imagery": "Fotografias reais preservadas; hero da LP mantém o retrato rosé.",
     "contrast": "Predominância escura com encerramento em marfim",
     "brand_lockup": "Monograma + MARTELLI CARE CLINIC + Dra. Priscilla Martelli"
   },
@@ -49,5 +51,21 @@
     "scroll": "Revelações, sequência de casos e zoom facial preservados",
     "ornamentation": "Sem órbitas e sem CTA circular",
     "reduced_motion": "Preservada"
+  },
+  "palette_standardization": {
+    "reference": "IDENTIDADE-VISUAL-ULTRAFORMER.md",
+    "scope": "Colors and surface finishes only; existing layout, typography, content, imagery and interactions preserved.",
+    "colors": {
+      "dark": "#09090B",
+      "dark_surface": "#18181B",
+      "white": "#FFFFFF",
+      "ivory": "#F9F7F2",
+      "closing": "#FAFAFA",
+      "light_ink": "#12120F",
+      "light_muted": "#4A4A46",
+      "dark_muted": "#D4D4D8",
+      "light_border": "#DEDBD4",
+      "dark_border": "#27272A"
+    }
   }
 }
